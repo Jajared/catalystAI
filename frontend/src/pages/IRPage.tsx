@@ -5,13 +5,11 @@ import { BounceLoader } from "react-spinners";
 import Footage1 from "../assets/Footages/footage1.mp4";
 import Footage2 from "../assets/Footages/footage2.mp4";
 import Footage3 from "../assets/Footages/footage3.mp4";
-import Footage4 from "../assets/Footages/footage4.mp4";
-import Footage5 from "../assets/Footages/footage5.mp4";
 
 function IRPage() {
   const [boxes, setBoxes] = useState<number[][]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const footages = [Footage1, Footage2, Footage3, Footage4, Footage5];
+  const footages = [Footage1, Footage2, Footage3];
   const [isVideo, setIsVideo] = useState(false);
   const [videoSrc, setVideoSrc] = useState(Footage1);
 
@@ -23,7 +21,7 @@ function IRPage() {
       data.append("image_file", file, "image_file");
       try {
         setIsLoading(true);
-        const apiUrl = "http://127.0.0.1:5000/detect";
+        const apiUrl = "https://aiqua-7c55de76013c.herokuapp.com/detect";
         axios
           .post(apiUrl, data)
           .then((response) => {
