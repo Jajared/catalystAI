@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import StatusBar from "../components/StatusBar";
-import CleanUp from "../assets/cleanup.jpeg";
+import CleanUp from "../assets/cleanup.jpg";
 interface RobotData {
   name: string;
   location: string;
@@ -23,7 +23,7 @@ function ImpactPage() {
             <div key={index} className="p-4 transition duration-300 border-2 border-black rounded-md shadow-md hover:bg-gray-100">
               <h2 className="mb-2 text-xl font-bold">{robot.name}</h2>
               <p className="text-gray-600">📍{robot.location}</p>
-              <p className={`text-white ${robot.status === "Operating" ? "text-green-500" : "text-red-500"}`}>Status: {robot.status}</p>
+              <p className={`${robot.status === "Operating" ? "text-green-500" : "text-red-500"}`}>Status: {robot.status}</p>
               <p className="text-gray-600">Waste Capacity:</p>
               <StatusBar percentage={robot.waste_capacity} />
             </div>
