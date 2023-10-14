@@ -1,6 +1,5 @@
 import os
 import tempfile
-from ultralytics import YOLO
 from flask import request, Response, Flask, jsonify, send_from_directory
 from flask_cors import CORS, cross_origin
 from PIL import Image
