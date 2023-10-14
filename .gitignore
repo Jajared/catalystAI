@@ -1,9 +1,2 @@
 env/
 data/
-    raw/
-        train/
-        test/
-    processed/
-        train/
-        test/
-        val/
